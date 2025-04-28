@@ -9,20 +9,29 @@ import Project from "./Project";
 const HomePage = () => {
   return ( 
     <div className="h-screen flex flex-col relative overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center opacity-30"
-        style={{ backgroundImage: "url('https://raw.githubusercontent.com/Sivatech24/solar-power-dashboard/135adbee06ad0b620d84b8146395bd3a7cdc9e57/pexels-enginakyurt-16659331.jpg')" }} // (local image in public folder)
-      ></div>
-      {/* Hero Section */}
-      <section className="flex-1 flex flex-col items-center justify-center bg-gray-100 text-gray-900 p-10 text-center">
-        <h2 className="text-5xl font-extrabold">AI-Powered Solar Dashboard</h2>
-        <p className="text-lg mt-4 text-gray-600">Analyze, predict, and optimize solar power generation</p>
-        <a href="https://solarpoweranalysis.streamlit.app/" className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700">
-          Open Dashboard
-        </a>
-      </section>
-    </div>
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 w-full h-full bg-cover bg-center"
+    style={{ 
+      backgroundImage: "url('https://raw.githubusercontent.com/Sivatech24/solar-power-dashboard/135adbee06ad0b620d84b8146395bd3a7cdc9e57/pexels-enginakyurt-16659331.jpg')", // Ensure URL works
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      zIndex: -1, // Put the image behind everything
+    }}
+  ></div>
+  
+  {/* Hero Section */}
+  <section className="flex-1 flex flex-col items-center justify-center text-white p-10 text-center">
+    <h2 className="text-5xl font-extrabold">AI-Powered Solar Dashboard</h2>
+    <p className="text-lg mt-4">Analyze, predict, and optimize solar power generation</p>
+    <a 
+      href="https://solarpoweranalysis.streamlit.app/" 
+      className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700"
+    >
+      Open Dashboard
+    </a>
+  </section>
+</div>
   );
 };
 
@@ -45,7 +54,7 @@ const App = () => {
   }
 
   return (
-    <Router basename="/solar-power-dashboard">
+    <Router basename="/solar-power-dashboard-analysis">
   <div className="h-screen flex flex-col font-sans">
     {/* Navbar */}
     <nav className="bg-white shadow-md p-4 flex justify-between items-center px-8">
